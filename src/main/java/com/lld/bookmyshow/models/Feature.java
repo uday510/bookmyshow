@@ -1,4 +1,4 @@
-package models;
+package com.lld.bookmyshow.models;
 
 public enum Feature {
     THREE_D,

@@ -1,5 +1,5 @@
 package com.lld.bookmyshow;
-import models.BaseModel;
+import com.lld.bookmyshow.models.BaseModel;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
