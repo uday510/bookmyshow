@@ -1,12 +1,11 @@
 package com.lld.bookmyshow.services;
 
-import com.lld.bookmyshow.models.Booking;
-import com.lld.bookmyshow.models.User;
+import com.lld.bookmyshow.models.*;
 import com.lld.bookmyshow.repositories.UserRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +17,7 @@ public class BookingService {
     BookingService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-    @Transactional(Isolation = Isolation.SERIALIZABLE)
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public Booking bookMovie(Long userId, List<Long> seatId, Long showId) {
         Optional<User> userOptional= userRepository.findById(userId);
 
